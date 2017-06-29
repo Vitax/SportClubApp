@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>SportClubApp</title>
-    <%= csrf_meta_tags %>
+    <head>
+        <title><%= full_title(yield(:title)) %></title>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+        <%= csrf_meta_tags %>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <% render  'layouts/shim' %>
+    </head>
+    <body>
 
-  <body>
-    <%= yield %>
-  </body>
+        <header class="navbar navbar-fixed-top navbar-inverse">
+            <div class="container">
+                <%= link_to "sample app", '#', id: "logo" %>
+                <nav>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><%= link_to "Home",   root_path %></li>
+                        <li><%= link_to "Help",   help_path  %></li>
+                        <li><%= link_to "Log in", '#' %></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container">
+            <%= yield %>
+        </div>
+
+        <footer class="footer">
+            <small>
+                Webpage developed by
+                <a href="caglar.oezel@googlemail.com">Caglar Özel</a>
+            </small>
+            <nav>
+                <ul>
+                    <li><%= link_to "About", about_path %></li>
+                    <li><%= link_to "Contact", contact_path %></li>
+                    <li>
+                        <a href="caglar.oezel@googlemail.com">News</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+
+    </body>
 </html>
