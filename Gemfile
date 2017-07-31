@@ -11,8 +11,9 @@ gem 'rails', '~> 5.1.1'
 gem 'jquery-rails', '>= 2.3.0'
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'bcrypt',         '~> 3.1.11'
+gem 'rails-controller-testing'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -58,8 +59,8 @@ group :development do
 end
 
 group :production do
-        # postgresql compatibility for heroku
-        gem 'pg', '0.21.0'
+  # postgresql compatibility for heroku
+  gem 'pg', '0.21.0'
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
