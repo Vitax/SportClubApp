@@ -10,17 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170730231923) do
+ActiveRecord::Schema.define(version: 20170801093312) do
 
   create_table "sportclubs", force: :cascade do |t|
-    t.integer "phonenumber"
-    t.string "postcode"
-    t.string "clublink"
-    t.integer "coordinates"
-    t.string "mailaddress"
     t.string "address"
-    t.string "website"
+    t.string "postcode"
     t.string "clubname"
+    t.integer "position"
+    t.string "mailaddress"
+    t.string "webpage"
+    t.integer "phonenumber"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
