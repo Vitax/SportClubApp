@@ -11,6 +11,8 @@ class UsersController < ApplicationController
   def create
   	@user = User.new(user_params)
   	if @user.save
+      flash[:success] = "Welcome to SportClub App"
+      log_in @user
     	redirect_to @user
   	else
       flash.now[:danger] = 'Invalid email/password combination'
