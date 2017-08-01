@@ -19,7 +19,6 @@
                         <li><%= link_to "Home", root_path %></li>
                         <li><%= link_to "Help", help_path %></li>
                         <% if logged_in? %>
-                            <li><%= link_to "Users", '#' %></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     Account <b class="caret"></b>
@@ -43,13 +42,14 @@
 
         <div class="container">
             <% flash.each do |message_type, message| %>
-                <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+                <div class="alert alert-<%= message_type %>"><%= message %></div>
             <% end %>
 
             <%= yield %>
         </div>
 
         <footer class="footer">
+            <%= debug(params) if Rails.env.development? %>
             <small>
                 Webpage developed by
                 <a href="caglar.oezel@googlemail.com">Caglar Özel</a>
