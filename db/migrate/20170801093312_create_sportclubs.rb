@@ -7,7 +7,7 @@ class CreateSportclubs < ActiveRecord::Migration[5.1]
       t.integer :position
       t.string :mailaddress
       t.string :webpage
-      t.integer :phonenumber
+      t.string :phonenumber
 
       t.timestamps
     end

@@ -22,5 +22,5 @@ data.each do |whole|
 								position: whole[clubInMap[3].to_i], 
 								mailaddress: whole[clubInMap[4].to_s], 
 								webpage: whole[clubInMap[6].to_s], 
-								phonenumber: whole[clubInMap[0].to_i] )
+								phonenumber: whole[clubInMap[0].to_s] )
 end

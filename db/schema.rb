@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20170801093312) do
     t.integer "position"
     t.string "mailaddress"
     t.string "webpage"
-    t.integer "phonenumber"
+    t.string "phonenumber"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
