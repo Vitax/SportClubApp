@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 clubInMap = nil
-file = File.read('/home/caglar/Code/RubyOnRails/SportClubApp/app/assets/javascripts/Data.json')
+file = File.read('./app/assets/javascripts/Data.json')
 data_hash = JSON.parse(file)
 
 data = data_hash['clubdata']
