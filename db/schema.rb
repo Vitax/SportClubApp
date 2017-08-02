@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170801093312) do
+ActiveRecord::Schema.define(version: 20170802222014) do
+
+  create_table "club_user_relations", force: :cascade do |t|
+    t.integer "sportclub_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["sportclub_id"], name: "index_club_user_relations_on_sportclub_id"
+    t.index ["user_id"], name: "index_club_user_relations_on_user_id"
+  end
 
   create_table "sportclubs", force: :cascade do |t|
     t.string "address"
@@ -22,6 +31,8 @@ ActiveRecord::Schema.define(version: 20170801093312) do
     t.string "phonenumber"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id_id"
+    t.index ["user_id_id"], name: "index_sportclubs_on_user_id_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -31,6 +42,8 @@ ActiveRecord::Schema.define(version: 20170801093312) do
     t.datetime "updated_at", null: false
     t.string "password_digest"
     t.string "remember_digest"
+    t.integer "sportclub_id_id"
+    t.index ["sportclub_id_id"], name: "index_users_on_sportclub_id_id"
   end
 
 end
