@@ -1,4 +1,4 @@
-<%= provide(:title, 'Home') %>
+l<%= provide(:title, 'Home') %>
 
 <!DOCTYPE html>
 <html>
@@ -10,11 +10,18 @@
 		    <h1>SportClub App</h1>
 
 			<% if logged_in? %>
+				<script type="text/javascript">
+					
+				</script>
 				<h2>
-					<% Sportclub each do |key, value|%>
-						<div class="container">
-							<div class"row">
-								<h1> <%= value %> </h1>
+					<% clubs.each do |c| %>
+						<div class="panel-group">
+							<div class="panel panel-default">
+								<%= c.clubname %> <br> <br>
+								Addresse: <%= c.address %> <br>
+								Postleitszahl: <%= c.postcode %> <br>
+								Telefon: <%= c.phonenumber %> <br>
+								<%= Sportclub.find_by(id: c.id) %>
 							</div>
 						</div>
 					<% end %>

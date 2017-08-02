@@ -1,12 +1,6 @@
 class SportclubsController < ApplicationController
 	def show
-	end
-
-	def create
-		@sportclub = Sportclub.new(sportclub_params)
-		if @sportclub.save
-
-		end
+		
 	end
 
 	private
