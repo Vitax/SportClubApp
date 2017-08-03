@@ -7,8 +7,7 @@ class SportclubsController < ApplicationController
 		@clubs = Sportclub.all()
 	end
 
-	private
-		def sportclub_params
-			params.require(:sportclub).permit(:address, :postcode, :clubname, :position, :mailaddress, :webpage, :phonenumber)
-		end 
+	def toggle
+		
+	end
 end

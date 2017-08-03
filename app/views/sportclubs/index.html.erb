@@ -9,7 +9,11 @@
 					Telefon: <%= c.phonenumber %> <br>
 				</div>
 
-				<%= button_to 'Remember', createRelation(c), style: "width: 25%; transform: translate();" %>
+				<%= form_for([c, c.club_user_relation.build]) do |f| %>
+			  	    <div>
+			  	      <%= f.submit 'Remember', style: "width: 50%; position: translate(50%)"%>
+			  	    </div>
+			  	<% end %>
 			</div>
 		<% end %>
 	</h2>

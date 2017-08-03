@@ -13,9 +13,11 @@ get 'sessions/new'
     post    '/login',   to: 'sessions#create'
     delete  '/logout',  to: 'sessions#destroy'
 
-    resources :sportclubs
+    resources :sportclubs do       
+        resources :club_user_relations
+    end
     resources :users do 
-        resources :club_user_relation
+        resources :club_user_relations
         get :'user_mark_club'
     end
 end
