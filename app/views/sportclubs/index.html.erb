@@ -1,0 +1,16 @@
+<div class="row">
+	<h2>
+		<% @clubs.each do |c| %>
+			<div class="panel-group">
+				<div class="panel panel-default" style="width: 50%; transform: translate(50%);">
+					<%= c.clubname %> <br> <br>
+					Addresse: <%= c.address %> <br>
+					Postleitszahl: <%= c.postcode %> <br>
+					Telefon: <%= c.phonenumber %> <br>
+				</div>
+
+				<%= button_to 'Remember', createRelation(c), style: "width: 25%; transform: translate();" %>
+			</div>
+		<% end %>
+	</h2>
+</div>

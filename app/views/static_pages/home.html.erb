@@ -9,22 +9,6 @@
 		<div class="center jumbotron">
 		    <h1>SportClub App</h1>
 			<% if logged_in? %>
-				<script type="text/javascript">
-					
-				</script>
-				<h2>
-					<% clubs.each do |c| %>
-						<div class="panel-group">
-							<div class="panel panel-default">
-								<%= c.clubname %> <br> <br>
-								Addresse: <%= c.address %> <br>
-								Postleitszahl: <%= c.postcode %> <br>
-								Telefon: <%= c.phonenumber %> <br>
-								<%= Sportclub.find_by(id: c.id) %>
-							</div>
-						</div>
-					<% end %>
-				</h2>
 			<% else %>
 			    <h2>
 			        This is the home page for the SportClub application.

@@ -20,6 +20,14 @@ class UsersController < ApplicationController
   	end
   end
 
+  #def user_mark_club
+  #  @user = User.find(params[:id])
+  #end
+  
+  def createRelation(club)
+    @user = current_user.club_user_relation.create(sportclub: club);
+  end
+  
   private 
   	def user_params
   		params.require(:user).permit(:name, :email, :password, :password_confirmation)

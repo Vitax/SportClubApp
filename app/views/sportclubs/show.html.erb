@@ -1,0 +1,17 @@
+<% provide(:title, @club.clubname) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+  		<div class="panel-group">
+			<div class="panel panel-default" style="width: 50%; transform: translate(50%);">
+				<%= @club.clubname %> <br> <br>
+				Addresse: <%= @club.address %> <br>
+				Postleitszahl: <%= @club.postcode %> <br>
+				Telefon: <%= @club.phonenumber %> <br>
+			</div>
+		</div>
+      </h1>
+    </section>
+  </aside>
+</div>

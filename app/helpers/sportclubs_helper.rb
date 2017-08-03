@@ -2,10 +2,6 @@ require 'json'
 
 module SportclubsHelper
 
-	def clubs
-		@clubs = Sportclub.all()
-	end
-	
 	def jsonTests
 		clubInMap = nil
 			file = File.read('/home/caglar/Code/RubyOnRails/SportClubApp/app/assets/javascripts/Data.json')
