@@ -1,24 +1,11 @@
+# SEE THE LASTEST TRAVIS BUILD STATUS: https://travis-ci.org/Vitax/SportClubApp.svg?branch=master
+
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a University project implementing a Concept for SportClub Application where you will be able to find desired clubs.
 
-Things you may want to cover:
+Possible future features would be Forums, Geolocations displayed on google maps / open street map for each club.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Be able to create a User
+- Have the possibility to create a Remember Link for a Club which will be saved in your user and displayed in the Account >> Profile Tab
+- Be able to Manage links (only delete currently)
