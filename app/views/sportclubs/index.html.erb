@@ -1,20 +1,27 @@
 <div class="row">
-	<h2>
-		<% @clubs.each do |c| %>
-			<div class="panel-group">
-				<div class="panel panel-default" style="width: 50%; transform: translate(50%);">
+	<% @clubs.each do |c| %>
+		<div class="col-md-4">
+			<div class="panel panel-default" style="text-overflow: ellipsis; height: 220px">
+				<h2 >
 					<%= c.clubname %> <br> <br>
 					Addresse: <%= c.address %> <br>
 					Postleitszahl: <%= c.postcode %> <br>
 					Telefon: <%= c.phonenumber %> <br>
-				</div>
-
+					Mailaddresse: <%= c.mailaddress %> <br>
+					Webseite: <%= c.webpage %>
+				</h2>
 				<%= form_for([c, c.club_user_relation.build]) do |f| %>
-			  	    <div>
-			  	      <%= f.submit 'Remember', style: "width: 50%; position: translate(50%)"%>
-			  	    </div>
-			  	<% end %>
+					<% if @query_list.any?{|i| i.sportclub_id == c.id} %>
+						<div>
+							<%= f.submit 'Forget', style: "width: 50%; margin-left:25%"%>
+						</div>
+					<% else %>
+						<div>
+							<%= f.submit 'Remember', style: "width: 50%; margin-left:25%"%>
+						</div>
+					<% end %>
+				<% end %>
 			</div>
-		<% end %>
-	</h2>
+		</div>
+	<% end %>
 </div>

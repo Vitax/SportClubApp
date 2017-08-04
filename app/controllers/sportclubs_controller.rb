@@ -6,8 +6,4 @@ class SportclubsController < ApplicationController
 	def index
 		@clubs = Sportclub.all()
 	end
-
-	def toggle
-		
-	end
 end

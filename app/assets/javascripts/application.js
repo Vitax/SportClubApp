@@ -16,3 +16,9 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+
+$(document).on("click", '#toggle_relation', function() {
+	$.ajax({
+		url: "/"
+	});
+});

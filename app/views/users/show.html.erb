@@ -6,16 +6,31 @@
     	<%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+      <h1>
+      	<%= @user.email%>
+      </h1>
     </section>
-    <% @relations.each do |r| %>
-		<div class="panel-group">
-			<div class="panel panel-default" style="width: 50%; transform: translate(50%);">
-				<%= r.sportclub.clubname %> <br> <br>
-				Addresse: <%= r.sportclub.address %> <br>
-				Postleitszahl: <%= r.sportclub.postcode %> <br>
-				Telefon: <%= r.sportclub.phonenumber %> <br>
-			</div>
-		</div>
-	<% end %>
-  </aside>
+   </aside>
 </div>
+<div class="row">
+	<% @relations.each do |c| %>
+		<div class="col-md-4">
+			<div class="panel panel-default" style="text-overflow: ellipsis; height: 220px">
+				<h2 >
+					<%= c.sportclub.clubname %> <br> <br>
+					Addresse: <%= c.sportclub.address %> <br>
+					Postleitszahl: <%= c.sportclub.postcode %> <br>
+					Telefon: <%= c.sportclub.phonenumber %> <br>
+					Mailaddresse: <%= c.sportclub.mailaddress %> <br>
+					Webseite: <%= c.sportclub.webpage %>
+				</h2>
+				<%= form_for([c.sportclub, c.sportclub.club_user_relation.build]) do |f|%>
+					<div>
+		  	    		<%= f.submit 'Forget', style: "width: 50%; margin-left:25%;"%>
+		  	    	</div>
+	  	    	<% end %>
+			</div>
+    	</div>
+	<% end %>
+</div>
+  
