@@ -1,4 +1,5 @@
-# SEE THE LASTEST TRAVIS BUILD STATUS: https://travis-ci.org/Vitax/SportClubApp.svg?branch=master
+# SEE THE LASTEST TRAVIS BUILD STATUS:
+https://travis-ci.org/Vitax/SportClubApp.svg?branch=master
 
 # README
 
